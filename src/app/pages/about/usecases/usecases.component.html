@@ -1,0 +1,80 @@
+<div class="row">
+  <div class="col-sm-6 col-md-8 col-lg-9">
+    <h1 id="aboutTitle">Over deze applicatie</h1>
+    <p>
+      Deze applicatie is gemaakt in het kader van het vak 'Clientside web frameworks' van Avans Hogeschool
+      Breda.
+    </p>
+    <h3>Avans Kookboek app</h3>
+    <p>
+      Mijn plan is om een app te maken met Meerdere gerechten waarin je zelf al je lekkere gerechten in kan opslaan zodat je ze altijd bij de hand hebt en altijd lekker kan eten :D.
+    </p>
+  </div>
+  <div class="col-sm-6 col-md-4 col-lg-3">
+    <div class="card">
+      <div class="d-flex justify-content-center align-items-center">
+        <img
+          src="assets/images/person.png"
+          class="card-img-top rounded-circle border profile-pic"
+          alt="..."
+        />
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Dani heyl</h5>
+        <p class="card-text">Studentnummer: 2169961</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3>Entiteiten</h3>
+<p>
+  Beschrijf hier jouw entiteiten, zodanig dat we de complexiteit en de onderlinge relaties ervan kunnen
+  beoordelen. Voeg ook een plaatje toe waarin je je datamodel visualiseert.
+</p>
+<div class="row">
+  <div class="col-sm-12 col-md-4">
+    <p>Entiteit 1</p>
+    <ul>
+      <li>naam: string</li>
+      <li>id: number</li>
+      <li>birthdate: date</li>
+      <li>isSelected: boolean</li>
+    </ul>
+  </div>
+  <div class="col-sm-12 col-md-4">
+    <p>Entiteit 2</p>
+    <ul>
+      <li>naam: string</li>
+      <li>id: number</li>
+      <li>birthdate: date</li>
+      <li>isSelected: boolean</li>
+    </ul>
+  </div>
+  <div class="col-sm-12 col-md-4">
+    <p>Entiteit 3</p>
+    <ul>
+      <li>naam: string</li>
+      <li>id: number</li>
+      <li>birthdate: date</li>
+      <li>isSelected: boolean</li>
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <img src="assets/images/voorbeeld-datamodel.png" alt="..." />
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <h3>Use Cases</h3>
+    <p>De applicatie biedt de volgende functionaliteit.</p>
+    <div *ngFor="let UC of useCases">
+      <app-usecase [useCase]="UC"></app-usecase>
+    </div>
+    <p>Vul hier zelf meer functionaliteit toe.</p>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+<h2>My Users</h2>
+<ul class="users">
+  <li *ngFor="let user of users"
+    [class.selected]="user === selectedUser"
+    (click)="onSelect(user)">
+    <span class="badge">{{user.id}}</span> {{user.name}}
+    
+    
+    
+  </li>
+  
+</ul>
+
+<div *ngIf="selectedUser">
+
+  <h2>{{selectedUser.name }} Details</h2>
+  <div>
+    <label for="user-name">User ID: </label>
+    <p>{{selectedUser.id}}</p>
+  </div>
+  <div>
+    <label for="user-name">User name: </label><br>
+    <input id="user-name" [(ngModel)]="selectedUser.name" placeholder="name">
+  </div>
+  <div>
+    <label for="user-name">Email: </label><br>
+    <input id="user-email" [(ngModel)]="selectedUser.email" placeholder="email">
+  </div>
+
+  <button class="btn btn-primary" (click)="delete(selectedUser.id)">Verwijder gebruiker</button>
+  
+
+</div>
+
+<h2>Voeg een gebruiker toe</h2>
+<form class="form" (ngSubmit)="onSubmit()" [formGroup]="addUserForm">
+	<div class="form-group">
+		<label for="Name">Name</label>
+		<input class="form-control" formControlName="name" placeholder="Vul hier je naam in"
+			aria-describedby="helpId">
+	</div>
+	<div class="form-group">
+		<label for="Email">E-mail</label>
+		<input class="form-control" formControlName="email" placeholder="Vul hier je e-mail adres in"
+			aria-describedby="helpId">
+	</div>
+	<div class="form-group">
+		<label for="DateOfBirth">Geboorte datum</label>
+		<input class="form-control" formControlName="dateOfBirth" placeholder="Je geboorte datum in"
+			aria-describedby="helpId" type="date">
+	</div>
+	<button type="submit" class="btn btn-primary">Submit</button>
+</form>
